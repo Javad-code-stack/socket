@@ -1,17 +1,17 @@
 const socket = io("ws://localhost:3500");
 
-const input = document.querySelector("input");
+const msgInput = document.querySelector("input");
 const form = document.querySelector("form");
 const list = document.querySelector("ul");
+const activity = document.querySelector(".activity");
 
 function sendMessage(e) {
 	e.preventDefault();
-	const input = document.querySelector("input");
-	if (input.value) {
-		socket.emit("message", input.value);
-		input.value = "";
+	if (msgInput.value) {
+		socket.emit("message", msgInput.value);
+		msgInput.value = "";
 	}
-	input.focus();
+	msgInput.focus();
 }
 
 /*
@@ -28,9 +28,25 @@ form.addEventListener("submit", sendMessage);
 
 // Listen for messages
 socket.on("message", (data) => {
+	activity.textContent = "";
 	const li = document.createElement("li");
 	li.textContent = data;
 	list.appendChild(li);
 
 	window.scrollTo(0, document.body.scrollHeight);
+});
+
+msgInput.addEventListener("keypress", () => {
+	socket.emit("activity", socket.id.substring(0, 5));
+});
+
+let activityTimer;
+socket.on("activity", (name) => {
+	activity.textContent = `${name} is typing ...`;
+
+	// Clear after 1 sec
+	clearTimeout(activityTimer);
+	activityTimer = setTimeout(() => {
+		activity.textContent = "";
+	}, 1000);
 });
