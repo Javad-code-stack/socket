@@ -1,5 +1,5 @@
 {
-	"name": "server",
+	"name": "live_chat",
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
@@ -12,8 +12,8 @@
 	"license": "ISC",
 	"type": "module",
 	"dependencies": {
-		"socket.io": "^4.8.1",
-		"ws": "^8.18.3"
+		"express": "^5.1.0",
+		"socket.io": "^4.8.1"
 	},
 	"devDependencies": {
 		"nodemon": "^3.1.10"
