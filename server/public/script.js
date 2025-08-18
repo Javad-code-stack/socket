@@ -1,9 +1,10 @@
 const socket = io("ws://localhost:3500");
 
-const msgInput = document.querySelector("input");
-const form = document.querySelector("form");
-const list = document.querySelector("ul");
-const activity = document.querySelector(".activity");
+const msgInput = document.querySelector("#msgInput");
+const form = document.querySelector("#msgForm");
+const connectForm = document.querySelector("#form-join");
+const list = document.querySelector("#msgList");
+const activity = document.querySelector("#activity-field");
 
 function sendMessage(e) {
 	e.preventDefault();

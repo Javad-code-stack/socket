@@ -13,24 +13,48 @@
 		<title>Live Chat WebSocket</title>
 	</head>
 	<body
-		class="bg-gradient-to-t from-gray-950 to-gray-800 p-4 h-screen text-white max-w-3xl mx-auto flex flex-col justify-center">
+		class="bg-linear-to-r from-indigo-800 to-gray-900 p-4 h-screen text-white max-w-4xl mx-auto flex flex-col justify-center">
 		<h1 class="text-4xl font-bold text-center mb-4">Live Chat</h1>
-		<ul
-			class="flex flex-col gap-4 p-4 rounded-xl mb-4 justify-start min-h-[50vh] max-h-[50vh] overflow-x-hidden overflow-y-auto border border-white"></ul>
-		<p class="mb-4 text-white text-sm rounded-xl border border-whtie py-2 px-4 activity min-h-10">
-			waiting for activity ...
-		</p>
-		<form class="flex items-center gap-3 w-full">
-			<input
-				type="text"
-				class="rounded-xl border-1 border-gray-800 bg-white text-gray-900 py-2 px-4 w-full"
-				placeholder="Write a message..." />
-			<button
-				type="submit"
-				class="py-2 px-4 cursor-pointer rounded-xl bg-gray-900 text-white transitionall duration-300 hover:bg-gray-700 border-1 border-white">
-				Send
-			</button>
-		</form>
+		<div class="w-full flex flex-col justify-center bg-white/20 backdrop-blur-md p-6 rounded-xl">
+			<form id="form-join" class="flex items-center justify-between gap-4 mb-4">
+				<input
+					class="w-full rounded-xl bg-white text-gray-900 text-sm py-3 px-6 focus:outline-blue-400"
+					type="text"
+					id="name"
+					maxlength="8"
+					size="5"
+					required
+					placeholder="name" />
+				<input
+					class="w-full rounded-xl bg-white text-gray-900 text-sm py-3 px-6 focus:outline-blue-400"
+					type="text"
+					id="room"
+					size="5"
+					required
+					placeholder="chatroom" />
+				<button
+					id="join"
+					type="submit"
+					class="bg-gray-800 rounded-xl py-3 px-6 text-sm font-bold hover:bg-gray-700 transitionall cursor-pointer border border-white">
+					Join
+				</button>
+			</form>
+			<ul id="msgList"
+				class="flex flex-col gap-4 p-4 rounded-xl mb-4 justify-start min-h-[50vh] max-h-[50vh] overflow-x-hidden overflow-y-auto border border-white"></ul>
+			<p id="activity-field" class="mb-4 text-white text-sm rounded-xl border border-whtie py-2 px-4 activity min-h-10">
+				waiting for activity ...
+			</p>
+			<form id="msgForm" class="flex items-center gap-3 w-full">
+				<textarea id="msgInput"
+					class="rounded-xl border-1 border-gray-800 bg-white text-gray-900 py-2 px-4 w-full max-h-[100px] min-h-[40px]"
+					placeholder="Write a message..."></textarea>
+				<button
+					type="submit"
+					class="py-2 px-4 cursor-pointer rounded-xl bg-gray-900 text-white transitionall duration-300 hover:bg-gray-700 border-1 border-white">
+					Send
+				</button>
+			</form>
+		</div>
 		<script defer src="script.js"></script>
 	</body>
 </html>
