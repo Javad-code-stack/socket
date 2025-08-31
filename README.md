@@ -2,16 +2,21 @@
 
 A real-time chat application built with Node.js, Express, and Socket.IO that allows users to join chat rooms and communicate with others in real-time.
 
+![Mainpage](./assets/1.png)
+
+[**Live Demo**](https://socket-vhd9.onrender.com)
+
 ## Table of Contents
-- [Project Description](#project-description)
-- [Key Features](#key-features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [File Structure](#file-structure)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
-- [Support](#support)
+
+-   [Project Description](#project-description)
+-   [Key Features](#key-features)
+-   [Installation](#installation)
+-   [Usage](#usage)
+-   [File Structure](#file-structure)
+-   [Technologies Used](#technologies-used)
+-   [Contributing](#contributing)
+-   [License](#license)
+-   [Support](#support)
 
 ## Project Description
 
@@ -21,42 +26,47 @@ The application is built using modern web technologies with a Node.js backend an
 
 ## Key Features
 
-- Real-time messaging using WebSocket technology
-- Multiple chat rooms support
-- User presence indicators
-- "User is typing" notifications
-- Responsive design that works on desktop and mobile devices
-- Room management with active room listings
-- User list display for each room
+-   Real-time messaging using WebSocket technology
+-   Multiple chat rooms support
+-   User presence indicators
+-   "User is typing" notifications
+-   Responsive design that works on desktop and mobile devices
+-   Room management with active room listings
+-   User list display for each room
 
 ## Installation
 
 To run this application locally, you need to have Node.js installed on your system.
 
 1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   ```
+
+    ```bash
+    git clone <repository-url>
+    ```
 
 2. Navigate to the project directory:
-   ```bash
-   cd socket
-   ```
+
+    ```bash
+    cd socket
+    ```
 
 3. Install dependencies:
-   ```bash
-   npm install
-   ```
+
+    ```bash
+    npm install
+    ```
 
 4. Start the development server:
-   ```bash
-   npm run dev
-   ```
 
-   Or for production:
-   ```bash
-   npm start
-   ```
+    ```bash
+    npm run dev
+    ```
+
+    Or for production:
+
+    ```bash
+    npm start
+    ```
 
 The application will be available at `http://localhost:3500`.
 
@@ -86,19 +96,19 @@ socket/
 
 ### Server Files
 
-- **[server.js](file:///S:/WIP-Codes/socket/server/server.js)**: Main server file containing the Express server setup, Socket.IO configuration, and chat room logic
-- **[index.html](file:///S:/WIP-Codes/socket/server/public/index.html)**: Main client interface with chat UI elements
-- **[script.js](file:///S:/WIP-Codes/socket/server/public/script.js)**: Client-side JavaScript handling Socket.IO events and UI interactions
-- **[style.css](file:///S:/WIP-Codes/socket/server/public/style.css)**: Custom styling for the chat interface
+-   **[server.js](file:///S:/WIP-Codes/socket/server/server.js)**: Main server file containing the Express server setup, Socket.IO configuration, and chat room logic
+-   **[index.html](file:///S:/WIP-Codes/socket/server/public/index.html)**: Main client interface with chat UI elements
+-   **[script.js](file:///S:/WIP-Codes/socket/server/public/script.js)**: Client-side JavaScript handling Socket.IO events and UI interactions
+-   **[style.css](file:///S:/WIP-Codes/socket/server/public/style.css)**: Custom styling for the chat interface
 
 ## Technologies Used
 
-- **Node.js**: JavaScript runtime environment
-- **Express**: Web application framework for Node.js
-- **Socket.IO**: Real-time bidirectional event-based communication library
-- **Tailwind CSS**: Utility-first CSS framework for styling
-- **HTML5/CSS3**: Markup and styling languages
-- **JavaScript**: Client-side scripting language
+-   **Node.js**: JavaScript runtime environment
+-   **Express**: Web application framework for Node.js
+-   **Socket.IO**: Real-time bidirectional event-based communication library
+-   **Tailwind CSS**: Utility-first CSS framework for styling
+-   **HTML5/CSS3**: Markup and styling languages
+-   **JavaScript**: Client-side scripting language
 
 ## Contributing
 
