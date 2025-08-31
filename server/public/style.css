@@ -14,14 +14,55 @@
 
 li {
 	max-width: 50%;
-	background-color: #fff5f2;
+	background-color: rgba(255, 255, 255, 0.4);
 	color: #333446;
-	border-bottom: 1px solid #7f8caa;
-	border-radius: 4px;
-	padding: 8px 12px;
+	border-radius: 8px;
 }
 
 .imaged {
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+.post {
+	display: flex;
+	flex-direction: column;
+}
+
+.post--right {
+	margin-left: auto;
+	align-self: flex-end;
+}
+
+.post__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.post__header--user {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: rgba(255, 255, 255, 0.6);
+	width: 100%;
+	padding: 4px 8px;
+}
+
+.post__header--reply {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: rgba(252, 188, 97, 0.7);
+	width: 100%;
+	padding: 4px 8px;
+}
+
+.post__text {
+	padding: 4px 8px;
+}
+
+.post__text__admin {
+	text-align: center;
+	padding: 4px 8px;
 }

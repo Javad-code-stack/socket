@@ -13,22 +13,23 @@
 		<title>Live Chat WebSocket</title>
 	</head>
 	<body
-		class="bg-linear-to-r from-indigo-800 to-gray-900 p-4 h-screen text-white max-w-4xl mx-auto flex flex-col justify-center">
-		<h1 class="text-4xl font-bold text-center mb-4">Live Chat</h1>
-		<div class="w-full flex flex-col justify-center bg-white/20 backdrop-blur-md p-6 rounded-xl">
+		class="bg-[url(/image/bg1.png)] p-4 h-screen text-white max-w-4xl mx-auto flex flex-col justify-center imaged">
+		<h1 class="text-4xl font-bold text-center mb-4 text-shadow-sm">Live Chat</h1>
+		<div
+			class="shadow-md w-full flex flex-col justify-center bg-white/20 backdrop-blur-md p-6 rounded-xl">
 			<form id="form-join" class="flex items-center justify-between gap-4 mb-4">
 				<input
-					class="w-full rounded-xl bg-white text-gray-900 text-sm py-3 px-6 focus:outline-blue-400"
+					class="w-full rounded-xl bg-white/40 text-gray-900 text-sm py-3 px-6 focus:outline-blue-400"
 					type="text"
-					id="name"
+					id="nameInput"
 					maxlength="8"
 					size="5"
 					required
 					placeholder="name" />
 				<input
-					class="w-full rounded-xl bg-white text-gray-900 text-sm py-3 px-6 focus:outline-blue-400"
+					class="w-full rounded-xl bg-white/40 text-gray-900 text-sm py-3 px-6 focus:outline-blue-400"
 					type="text"
-					id="room"
+					id="roomInput"
 					size="5"
 					required
 					placeholder="chatroom" />
@@ -39,14 +40,23 @@
 					Join
 				</button>
 			</form>
-			<ul id="msgList"
+			<ul
+				id="chatDisplay"
 				class="flex flex-col gap-4 p-4 rounded-xl mb-4 justify-start min-h-[50vh] max-h-[50vh] overflow-x-hidden overflow-y-auto border border-white"></ul>
-			<p id="activity-field" class="mb-4 text-white text-sm rounded-xl border border-whtie py-2 px-4 activity min-h-10">
+
+			<p id="user-list" class=""></p>
+			<p id="room-list" class=""></p>
+
+			<p
+				id="activity-field"
+				class="mb-4 text-white text-sm rounded-xl border border-whtie py-2 px-4 activity min-h-10">
 				waiting for activity ...
 			</p>
+
 			<form id="msgForm" class="flex items-center gap-3 w-full">
-				<textarea id="msgInput"
-					class="rounded-xl border-1 border-gray-800 bg-white text-gray-900 py-2 px-4 w-full max-h-[100px] min-h-[40px]"
+				<textarea
+					id="msgInput"
+					class="rounded-xl bg-white/40 text-gray-900 py-2 px-4 w-full max-h-[100px] min-h-[40px] focus:outline-blue-400"
 					placeholder="Write a message..."></textarea>
 				<button
 					type="submit"
